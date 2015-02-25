@@ -1,4 +1,4 @@
-var app = angular.module('quizApp', []);
+var app = angular.module('quizApp', ['ui.bootstrap']);
 
 app.directive('quiz', function(quizFactory) {
 	return {
@@ -31,7 +31,6 @@ app.directive('quiz', function(quizFactory) {
 					scope.answerMode = true;
 				} else {
 					scope.quizOver = true;
-					scope.stopTimer();
 				}
 			};
 
@@ -58,6 +57,22 @@ app.directive('quiz', function(quizFactory) {
 			scope.reset();
 		}
 	}
+});
+
+app.controller('CarouselDemoCtrl', function ($scope) {
+  $scope.myInterval = 5000;
+  var slides = $scope.slides = [];
+  $scope.addSlide = function() {
+    var newWidth = 600 + slides.length + 1;
+    slides.push({
+      image: 'http://placekitten.com/' + newWidth + '/300',
+      text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
+        ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
+    });
+  };
+  for (var i=0; i<4; i++) {
+    $scope.addSlide();
+  }
 });
 
 app.factory('quizFactory', function() {

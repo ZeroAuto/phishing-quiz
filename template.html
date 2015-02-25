@@ -37,5 +37,17 @@
 
 <div class="intro" ng-show="!inProgress">
 	<p>Welcome to the Cynergistek Phishing Quiz. Social engineering which includes phishing attacks and compromise data and cost millions. Can you tell the difference between a legitimate email and a phish?</p>
+	<div ng-controller="CarouselDemoCtrl" id="slides_control">
+    <div>
+      <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+          <img ng-src="{{slide.image}}">
+          <div class="carousel-caption">
+            <h4>Slide {{$index+1}}</h4>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
 	<button id="startQuiz" ng-click="start()">Start the Quiz</button>
 </div>
