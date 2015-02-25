@@ -21,12 +21,17 @@ app.directive('quiz', function(quizFactory) {
 			scope.getQuestion = function() {
 				var q = quizFactory.getQuestion(scope.id);
 				if(q) {
+					scope.start_image = q.start_image
+					scope.final_image = q.final_image
 					scope.question = q.question;
 					scope.options = q.options;
+					scope.correct = q.correct
+					scope.incorrect = q.incorrect
 					scope.answer = q.answer;
 					scope.answerMode = true;
 				} else {
 					scope.quizOver = true;
+					scope.stopTimer();
 				}
 			};
 
@@ -58,29 +63,31 @@ app.directive('quiz', function(quizFactory) {
 app.factory('quizFactory', function() {
 	var questions = [
 		{
-			question: "Which is the largest country in the world by population?",
-			options: ["India", "USA", "China", "Russia"],
-			answer: 2
+			start_image: "img/bby_email.jpg",
+			final_image: "img/bby_email_final.jpg",
+			question: "Legit or phish?",
+			options: ["Legit", "Phish"],
+			answer: 1,
+			correct: "Right, this is a phish",
+			incorrect: "Sorry this is legit"
 		},
 		{
-			question: "When did the second world war end?",
-			options: ["1945", "1939", "1944", "1942"],
-			answer: 0
+			start_image: "img/PhishingTrustedBank.png",
+			final_image: "img/PhishingTrustedBank.png",
+			question: "Legit or phish?",
+			options: ["Legit", "Phish"],
+			answer: 0,
+			correct: "Right, this is a legit",
+			incorrect: "Sorry this is a phish"
 		},
 		{
-			question: "Which was the first country to issue paper currency?",
-			options: ["USA", "France", "Italy", "China"],
-			answer: 3
-		},
-		{
-			question: "Which city hosted the 1996 Summer Olympics?",
-			options: ["Atlanta", "Sydney", "Athens", "Beijing"],
-			answer: 0
-		},
-		{	
-			question: "Who invented telephone?",
-			options: ["Albert Einstein", "Alexander Graham Bell", "Isaac Newton", "Marie Curie"],
-			answer: 1
+			start_image: "img/LinkedIn_118.png",
+			final_image: "img/LinkedIn_118_final.png",
+			question: "Legit or phish?",
+			options: ["Legit", "Phish"],
+			answer: 1,
+			correct: "Right, this is a phish",
+			incorrect: "Sorry this is legit"
 		}
 	];
 

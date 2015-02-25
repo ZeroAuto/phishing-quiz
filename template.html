@@ -1,5 +1,12 @@
 <div class="quiz-area" ng-show="inProgress">
+	<timer interval="1000">{{10-seconds}}</timer>
 	<div ng-show="!quizOver">
+		<div ng-show="answerMode">	
+			<img src="{{start_image}}">
+		</div>
+		<div ng-show="!answerMode">
+			<img src="{{final_image}}">
+		</div>
 		<h2 id="question">{{question}}</h2>
 		<ul id="options">
 			<li ng-repeat="option in options">
@@ -13,14 +20,14 @@
 
 		<div ng-show="!answerMode">
 			<button ng-click="nextQuestion()" class="next-question">Next</button>
-			<span ng-show="correctAns">That is correct!</span>
-			<span ng-show="!correctAns">Sorry, that is an incorrect answer.</span>
+			<span ng-show="correctAns">{{correct}}</span>
+			<span ng-show="!correctAns">{{incorrect}}</span>
 		</div>
 	</div>
 
 	<div ng-show="quizOver">
 		<h2>Quiz is over</h2>
-		<button ng-click="reset()">Play again</button>
+		<button><a href="index.html">Play again</a></button>
 	</div>
 
 	<div id="score">
@@ -29,6 +36,6 @@
 </div>
 
 <div class="intro" ng-show="!inProgress">
-	<p>Welcome to the QuizApp</p>
+	<p>Welcome to the Cynergistek Phishing Quiz. Social engineering which includes phishing attacks and compromise data and cost millions. Can you tell the difference between a legitimate email and a phish?</p>
 	<button id="startQuiz" ng-click="start()">Start the Quiz</button>
 </div>
