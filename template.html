@@ -1,6 +1,5 @@
 <div class="quiz-area" ng-show="inProgress">
-	<timer interval="1000">{{10-seconds}}</timer>
-	<div ng-show="!quizOver">
+	<div class="centered-elem" ng-show="!quizOver">
 		<div ng-show="answerMode">	
 			<img src="{{start_image}}">
 		</div>
@@ -16,8 +15,9 @@
 				</label>
 			</li>
 		</ul>
-		<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
-
+		<div class="centered-elem">
+			<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
+		</div>
 		<div ng-show="!answerMode">
 			<button ng-click="nextQuestion()" class="next-question">Next</button>
 			<span ng-show="correctAns">{{correct}}</span>
@@ -25,12 +25,12 @@
 		</div>
 	</div>
 
-	<div ng-show="quizOver">
+	<div class="centered-elem" ng-show="quizOver">
 		<h2>Quiz is over</h2>
 		<button><a href="index.html">Play again</a></button>
 	</div>
 
-	<div id="score">
+	<div class="centered-elem" id="score">
 		Score: {{score}}
 	</div>
 </div>
@@ -43,11 +43,12 @@
         <slide ng-repeat="slide in slides" active="slide.active">
           <img ng-src="{{slide.image}}">
           <div class="carousel-caption">
-            <h4>Slide {{$index+1}}</h4>
           </div>
         </slide>
       </carousel>
     </div>
   </div>
-	<button id="startQuiz" ng-click="start()">Start the Quiz</button>
+  <div class="centered-elem">
+		<button id="startQuiz" ng-click="start()">Start the Quiz</button>
+	</div>
 </div>

@@ -1,2 +1,21 @@
 ul {
   list-style-type: none; }
+
+.carousel-inner img {
+  text-align: center;
+  margin: 0 auto;
+  width: 750px;
+  height: 540px; }
+
+.row .centered-elem {
+  text-align: center; }
+.row .title {
+  text-align: center; }
+.row button {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #0078AE; }
+.row button#startQuiz {
+  margin-top: 2rem;
+  font-size: 24px; }

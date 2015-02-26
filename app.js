@@ -63,16 +63,13 @@ app.controller('CarouselDemoCtrl', function ($scope) {
   $scope.myInterval = 5000;
   $scope.slides = [
   	{
-  		image: "img/cynergistek-FINAL-JPG-Trans.jpg",
-  		text: "Cynergistek INC"
+  		image: "img/cynergistek-FINAL-JPG-Trans.jpg"
+		},
+  	{
+  		image: "img/amazon-phish.jpg"
   	},
   	{
-  		image: "img/amazon-phish.jpg",
-  		text: "Amazon Phish"
-  	},
-  	{
-  		image: "img/pic006.jpg",
-  		text: "Another Phish Example"
+  		image: "img/pic006.jpg"
   	}
   ];
 });
