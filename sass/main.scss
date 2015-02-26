@@ -23,10 +23,29 @@ ul {
 		outline:none;
 		color:white;
 		background-color:#0078AE;
+		font-size:20px;
 	}
 	button#startQuiz {
 		margin-top:2rem;
 		font-size:24px;
 	}
+	button#playAgain {
+		a {
+			color:white!important;
+			text-decoration: none;
+			font-size:inherit;
+		}
+		a:hover {
+			color:white!important;
+		}
+	}
+	img.phish-image {
+		width:720;
+		height:480;
+	}
+}
+
+ol.carousel-indicators {
+	visibility:hidden;
 }
 

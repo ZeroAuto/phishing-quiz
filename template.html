@@ -1,33 +1,35 @@
 <div class="quiz-area" ng-show="inProgress">
-	<div class="centered-elem" ng-show="!quizOver">
-		<div ng-show="answerMode">	
-			<img src="{{start_image}}">
+	<form role="form">
+		<div class="centered-elem" ng-show="!quizOver">
+			<div ng-show="answerMode">	
+				<img class="phish-image" src="{{start_image}}" style="width:722px; height:480px">
+			</div>
+			<div ng-show="!answerMode">
+				<img class="phish-image" src="{{final_image}}" style="width:722px; height:480px">
+			</div>
+			<h2 id="question">{{question}}</h2>
+			<ul id="options">
+				<li ng-repeat="option in options">
+					<label  class="radio-inline">
+						<input type="radio" name="answer" value="{{option}}">
+						{{option}}
+					</label>
+				</li>
+			</ul>
+			<div class="centered-elem">
+				<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
+			</div>
+			<div ng-show="!answerMode">
+				<button ng-click="nextQuestion()" class="next-question">Next</button>
+				<span ng-show="correctAns">{{correct}}</span>
+				<span ng-show="!correctAns">{{incorrect}}</span>
+			</div>
 		</div>
-		<div ng-show="!answerMode">
-			<img src="{{final_image}}">
-		</div>
-		<h2 id="question">{{question}}</h2>
-		<ul id="options">
-			<li ng-repeat="option in options">
-				<label>
-					<input type="radio" name="answer" value="{{option}}">
-					{{option}}
-				</label>
-			</li>
-		</ul>
-		<div class="centered-elem">
-			<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
-		</div>
-		<div ng-show="!answerMode">
-			<button ng-click="nextQuestion()" class="next-question">Next</button>
-			<span ng-show="correctAns">{{correct}}</span>
-			<span ng-show="!correctAns">{{incorrect}}</span>
-		</div>
-	</div>
+	</form>
 
 	<div class="centered-elem" ng-show="quizOver">
 		<h2>Quiz is over</h2>
-		<button><a href="index.html">Play again</a></button>
+		<button id="playAgain"><a href="index.html">Play again</a></button>
 	</div>
 
 	<div class="centered-elem" id="score">
@@ -41,7 +43,7 @@
     <div>
       <carousel interval="myInterval">
         <slide ng-repeat="slide in slides" active="slide.active">
-          <img ng-src="{{slide.image}}">
+          <img class="slide-image" ng-src="{{slide.image}}">
           <div class="carousel-caption">
           </div>
         </slide>

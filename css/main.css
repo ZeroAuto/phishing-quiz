@@ -15,7 +15,20 @@ ul {
   border: none;
   outline: none;
   color: white;
-  background-color: #0078AE; }
+  background-color: #0078AE;
+  font-size: 20px; }
 .row button#startQuiz {
   margin-top: 2rem;
   font-size: 24px; }
+.row button#playAgain a {
+  color: white !important;
+  text-decoration: none;
+  font-size: inherit; }
+.row button#playAgain a:hover {
+  color: white !important; }
+.row img.phish-image {
+  width: 720;
+  height: 480; }
+
+ol.carousel-indicators {
+  visibility: hidden; }
