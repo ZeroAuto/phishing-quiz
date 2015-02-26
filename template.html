@@ -34,8 +34,12 @@
 		<button id="playAgain"><a href="index.html">Play again</a></button>
 	</div>
 
-	<div id="score" style="margin-left:240px; margin-top:2rem">
-		<b>Score: {{score}}</b>
+	<div id="score" style="margin-left:240px; margin-top:2rem;" ng-show="!quizOver">
+		<p style="font-size:20px">Score: <b>{{score}}</b></p>
+	</div>
+
+	<div id="final-score" style="text-align:center;" ng-show="quizOver">
+		<p style="font-size:20px">Score: <b>{{score}}</b></p>
 	</div>
 </div>
 
