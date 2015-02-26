@@ -14,10 +14,22 @@ ul {
 .row {
 	.centered-elem {
 		text-align:center;
+
+		#answerSection {
+			text-align:left!important;
+			margin-left:240px;
+
+			ul#options {
+				padding-left:0px;
+			}
+		}
+
 	}
+
 	.title {
 		text-align:center;
 	}
+
 	button {
 		border:none;
 		outline:none;
@@ -25,10 +37,12 @@ ul {
 		background-color:#0078AE;
 		font-size:20px;
 	}
+
 	button#startQuiz {
 		margin-top:2rem;
 		font-size:24px;
 	}
+
 	button#playAgain {
 		a {
 			color:white!important;
@@ -39,6 +53,7 @@ ul {
 			color:white!important;
 		}
 	}
+
 	img.phish-image {
 		width:720;
 		height:480;

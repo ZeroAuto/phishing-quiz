@@ -9,6 +9,11 @@ ul {
 
 .row .centered-elem {
   text-align: center; }
+  .row .centered-elem #answerSection {
+    text-align: left !important;
+    margin-left: 240px; }
+    .row .centered-elem #answerSection ul#options {
+      padding-left: 0px; }
 .row .title {
   text-align: center; }
 .row button {

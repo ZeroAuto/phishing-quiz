@@ -60,7 +60,7 @@ app.directive('quiz', function(quizFactory) {
 });
 
 app.controller('CarouselDemoCtrl', function ($scope) {
-  $scope.myInterval = 5000;
+  $scope.myInterval = 3000;
   $scope.slides = [
   	{
   		image: "img/cynergistek-FINAL-JPG-Trans.jpg"
