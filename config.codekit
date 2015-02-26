@@ -2770,6 +2770,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/cynergistek-FINAL-JPG-Trans.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 97332,
+		"inputAbbreviatedPath": "\/img\/cynergistek-FINAL-JPG-Trans.jpg",
+		"outputAbbreviatedPath": "\/img\/cynergistek-FINAL-JPG-Trans.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/LinkedIn_118.png": {
 		"fileType": 32768,
 		"ignore": 0,
