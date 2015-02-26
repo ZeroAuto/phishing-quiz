@@ -1,0 +1,62 @@
+<div class="quiz-area" ng-show="inProgress">
+	<form role="form">
+		<div class="centered-elem" ng-show="!quizOver">
+			<div ng-show="answerMode">	
+				<img class="phish-image" src="{{start_image}}" style="width:722px; height:480px">
+			</div>
+			<div ng-show="!answerMode">
+				<img class="phish-image" src="{{final_image}}" style="width:722px; height:480px">
+			</div>
+			<div id="answerSection" >
+				<h2 id="question">{{question}}</h2>
+				<ul id="options">
+					<li ng-repeat="option in options">
+						<label  class="radio-inline">
+							<input type="radio" name="answer" value="{{option}}">
+							{{option}}
+						</label>
+					</li>
+				</ul>
+				<div class="submitParent">
+					<button ng-click="checkAnswer()" ng-show="answerMode">Submit</button>
+				</div>
+				<div class="nextParent" ng-show="!answerMode">
+					<button ng-click="nextQuestion()" class="next-question">Next</button>
+					<span ng-show="correctAns">{{correct}}</span>
+					<span ng-show="!correctAns">{{incorrect}}</span>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<div class="centered-elem" ng-show="quizOver">
+		<h2>Quiz is over</h2>
+		<button id="playAgain"><a href="index.html">Play again</a></button>
+	</div>
+
+	<div id="score" style="margin-left:240px; margin-top:2rem;" ng-show="!quizOver">
+		<p style="font-size:20px">Score: <b>{{score}}</b></p>
+	</div>
+
+	<div id="final-score" style="text-align:center; margin-top:2rem;" ng-show="quizOver">
+		<p style="font-size:20px">Your final score: <b>{{score}}</b> out of {{}}</p>
+	</div>
+</div>
+
+<div class="intro" ng-show="!inProgress">
+	<p>Welcome to the Cynergistek Phishing Quiz. Social engineering which includes phishing attacks and compromise data and cost millions. Can you tell the difference between a legitimate email and a phish?</p>
+	<div ng-controller="CarouselDemoCtrl" id="slides_control">
+    <div>
+      <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+          <img class="slide-image" ng-src="{{slide.image}}">
+          <div class="carousel-caption">
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+  <div class="centered-elem">
+		<button id="startQuiz" ng-click="start()">Start the Quiz</button>
+	</div>
+</div>

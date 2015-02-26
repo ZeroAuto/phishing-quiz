@@ -1,0 +1,41 @@
+ul {
+  list-style-type: none; }
+
+.carousel-inner img {
+  text-align: center;
+  margin: 0 auto;
+  width: 750px;
+  height: 540px; }
+
+.row .centered-elem {
+  text-align: center; }
+  .row .centered-elem #answerSection {
+    text-align: left !important;
+    margin-left: 240px; }
+    .row .centered-elem #answerSection ul#options {
+      padding-left: 0px; }
+  .row .centered-elem #score p {
+    font-size: 20px; }
+.row .title {
+  text-align: center; }
+.row button {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #0078AE;
+  font-size: 20px; }
+.row button#startQuiz {
+  margin-top: 2rem;
+  font-size: 24px; }
+.row button#playAgain a {
+  color: white !important;
+  text-decoration: none;
+  font-size: inherit; }
+.row button#playAgain a:hover {
+  color: white !important; }
+.row img.phish-image {
+  width: 720;
+  height: 480; }
+
+ol.carousel-indicators {
+  visibility: hidden; }
